@@ -18,7 +18,11 @@ const maxSubArray = (arr, n) => {
   return sum;
 };
 
-console.log(maxSubArray([1, 2, 5, 2, 8, 1, 5], 3));
+let temp = [1, 2, 5, 2, 8, 1, 5]
+// console.log(maxSubArray([1, 2, 5, 2, 8, 1, 5], 3));
+console.log(temp.splice(1));
+console.log(temp.slice(1));
+console.log(temp)
 // console.log(maxSubArray([4.2, 1, 6], 1));
 // console.log(maxSubArray([1, 2, 5, 2, 8, 1, 5], 4));
 
