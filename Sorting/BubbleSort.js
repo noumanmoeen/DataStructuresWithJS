@@ -18,4 +18,6 @@ const bubbleSortedArray = BubbleSort(sampleArray);
 
 console.log(bubbleSortedArray);
 
-
+// array.sort() function provided by javascript actually sorts by converting the contents of an
+// array unless you pass a comparator function like
+// [6,3,6,23,4,8,9].sort((a,b) => a - b  )
