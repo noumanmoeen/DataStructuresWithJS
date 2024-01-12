@@ -22,3 +22,6 @@ const selectionSort = (array) => {
 const testArr = [5, 3, 4, 1, 2];
 
 console.log(selectionSort(testArr));
+
+
+// Revising selection sort 
