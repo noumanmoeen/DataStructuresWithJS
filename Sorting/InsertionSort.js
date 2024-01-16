@@ -6,7 +6,10 @@ const insertionSort = (arr) => {
       arr[j] = curr;
     }
   }
+
+  return arr
 };
 
-insertionSort([2, 1, 9, 76, 4]);
+console.log(insertionSort([2, 1, 9, 76, 4]));
+console.log(insertionSort([29, 10, 14, 37, 14]));
 
