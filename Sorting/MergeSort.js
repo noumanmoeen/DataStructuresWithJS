@@ -3,13 +3,7 @@ const merge = (left = [], right = []) => {
   let i = 0,
     j = 0;
   while (i <= left.length - 1 && j <= right.length - 1) {
-    if (left[i] <= right[j]) {
-      result.push(left[i]);
-      i++;
-    } else if (left[i] >= right[j]) {
-      result.push(right[j]);
-      j++;
-    }
+    
   }
 };
 
