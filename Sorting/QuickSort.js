@@ -20,4 +20,5 @@ const pivotHelper = (array = []) => {
   return { lessCount, array };
 };
 
+
 console.log(pivotHelper([5, 2, 1, 8, 4, 7, 6, 3]));
