@@ -72,3 +72,31 @@ const sumZero = (arr) => {
 // console.log(sumZero([-2, -1, 0, 1, 3]));
 // console.log(sumZero([1, 2, 3]));
 // console.log(sumZero([3]));
+
+
+
+// Problem Statement:
+// Given a sorted array, remove the duplicates in-place so that each element appears only once and return the new length of the array.
+// Example:
+let nums = [1, 1, 2, 2, 3, 4, 4, 5,5]  
+// Output: 5 (Modified array: [1, 2, 3, 4, 5, _, _, _])
+
+const removeDuplicates = (arr = []) => {
+
+  let newArr = []
+
+  for(let i = 0 , j = 0 ; j < arr.length ; j ++ )
+    {
+      const firstElement = arr[i];
+      const currElement = arr[j];
+
+        if(firstElement !== currElement)
+        {
+          newArr.push(arr[i])
+          i = j
+        }
+    }
+    return newArr
+}
+
+console.log("EXE --------- " , removeDuplicates(nums))

@@ -38,3 +38,4 @@ let arr2 = [4, 6];
 const result = frequencyCounterPattern(arr1, arr2);
 
 console.log("-----------------", result);
+
