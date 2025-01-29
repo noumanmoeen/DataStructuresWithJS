@@ -1,4 +1,3 @@
-
 // PROBLEM STATEMENT
 
 // Write a function to count unique values in an array
@@ -10,37 +9,29 @@
 // [] ====> 0
 
 const countUnique = (arr) => {
-
-  let left = 0
-  let right = left + 1; 
-  let count = 0
+  let left = 0;
+  let right = left + 1;
+  let count = 0;
 
   for (let i = 0; i < arr.length; i++) {
- 
-    if(arr[left] === arr[right])
-    {
-      right++
+    if (arr[left] === arr[right]) {
+      right++;
+    } else {
+      left = right;
+      right++;
+      count++;
     }
-    else
-    {
-      left = right
-      right++
-      count++
-    }
-    
   }
 
-  return count
+  return count;
+};
 
-}
+// OUTPUT
 
-// OUTPUT 
-
-console.log(countUnique([1,1,1,1,1,1,2]))
-console.log(countUnique([1,2,3,3,3,4,4,4,4,5,5]))
-console.log(countUnique([-2,-1,-1,0,1]))
-console.log(countUnique([]))
-
+console.log(countUnique([1, 1, 1, 1, 1, 1, 2]));
+console.log(countUnique([1, 2, 3, 3, 3, 4, 4, 4, 4, 5, 5]));
+console.log(countUnique([-2, -1, -1, 0, 1]));
+console.log(countUnique([]));
 
 // PROBLEM STATEMENT
 //
@@ -73,30 +64,29 @@ const sumZero = (arr) => {
 // console.log(sumZero([1, 2, 3]));
 // console.log(sumZero([3]));
 
-
-
 // Problem Statement:
 // Given a sorted array, remove the duplicates in-place so that each element appears only once and return the new length of the array.
 // Example:
-let nums = [1, 1, 2, 2, 3, 4, 4, 5,5]  
+let nums = [1, 1, 2, 2, 3, 4, 4, 5,5,5,5,5];
 // Output: 5 (Modified array: [1, 2, 3, 4, 5, _, _, _])
 
 const removeDuplicates = (arr = []) => {
+  let newArr = [];
 
-  let newArr = []
+  for (let i = 0, j = 0; j < arr.length; j++) {
+    const firstElement = arr[i];
+    const currElement = arr[j];
 
-  for(let i = 0 , j = 0 ; j < arr.length ; j ++ )
-    {
-      const firstElement = arr[i];
-      const currElement = arr[j];
-
-        if(firstElement !== currElement)
-        {
-          newArr.push(arr[i])
-          i = j
-        }
+   
+    if (firstElement !== currElement) {
+      newArr.push(arr[i]);
+      i = j;
     }
-    return newArr
-}
+    if (j === arr.length - 1) {
+      newArr.push(arr[j]);
+    }
+  }
+  return newArr;
+};
 
-console.log("EXE --------- " , removeDuplicates(nums))
+console.log("EXE --------- ", removeDuplicates(nums));
